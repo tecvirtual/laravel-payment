@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('card', 'TecvirtualPaymentController@card');
+Route::post('card', 'TecvirtualPaymentController@payment')->name('payment.post');
